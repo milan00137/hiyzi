@@ -1,6 +1,6 @@
 type Props = object;
 
-const BigTexts = (props: Props) => {
+const BigTexts = ({}: Props) => {
   return (
     <section className="min-h-screen w-screen overflow-hidden bg-[#FE6334] text-[#FEE832]">
       <h2 className="grid w-full gap-[3vw] py-10 text-center font-black uppercase leading-[.7]">
