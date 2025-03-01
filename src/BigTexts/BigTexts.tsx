@@ -1,9 +1,4 @@
-"use client"
-
-import { Bubbles } from "@/Hero/Bubbles";
-import { View } from "@react-three/drei";
-
-type Props = {};
+type Props = object;
 
 const BigTexts = (props: Props) => {
   return (

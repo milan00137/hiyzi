@@ -1,6 +1,6 @@
 import { HiyziLogo } from './HiyziLogo'
 
-type Props = {}
+type Props = object
 
 export default function Header({}: Props) {
   return (

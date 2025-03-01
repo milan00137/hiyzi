@@ -27,7 +27,7 @@ const FLAVORS: {
   { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
 ];
 
-type Props = {};
+type Props = object;
 
 export default function Carousel({}: Props) {
   const [currentFlavorIndex, setCurrentFlavorIndex] = useState(0);

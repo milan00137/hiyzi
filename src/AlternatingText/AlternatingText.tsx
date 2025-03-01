@@ -4,7 +4,6 @@ import { Bounded } from "@/components/Bounded";
 import { View } from "@react-three/drei";
 import clsx from "clsx";
 import Scene from "./Scene";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 // Static Texts:
 
@@ -26,7 +25,7 @@ const TextsArray = [
 /**
  * Props for `AlternatingText`.
  */
-type props = {};
+type props = object;
 
 /**
  * Component for "AlternatingText" Slices.

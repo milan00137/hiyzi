@@ -38,15 +38,12 @@ export function Bubbles({
     if (!mesh) {
       return;
     }
-    // Assign current body color to bubble so it looks natural
-    material.color = new THREE.Color(document.body.style.backgroundColor);
-
     // Create {count} number of bubbles in random locations
     for (let i = 0; i < count; i++) {
       o.position.set(
         gsap.utils.random(-4, 4),
         gsap.utils.random(-4, 4),
-        gsap.utils.random(-4, 4),
+        gsap.utils.random(-4, 4)
       );
 
       // Update matrix so that the position is applied
@@ -70,6 +67,9 @@ export function Bubbles({
     if (!meshRef.current) {
       return;
     }
+
+    // Assign current body color to bubble so it looks natural
+    material.color = new THREE.Color(document.body.style.backgroundColor);
 
     for (let i = 0; i < count; i++) {
       meshRef.current.getMatrixAt(i, o.matrix);

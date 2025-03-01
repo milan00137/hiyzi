@@ -14,7 +14,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-type Props = {};
+type Props = object;
 
 export default function Hero({}: Props) {
   const ready = useBearStore((state) => state.ready);

@@ -4,7 +4,7 @@ import { Bounded } from "@/components/Bounded";
 import { View } from "@react-three/drei";
 import Scene from "./Scene";
 
-type Props = {};
+type Props = object;
 
 export default function SkyDive({}: Props) {
   return (

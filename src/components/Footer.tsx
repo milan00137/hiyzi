@@ -2,7 +2,7 @@ import React from "react";
 import CircleText from "./CircleText";
 import { HiyziLogo } from "./HiyziLogo";
 
-type Props = {};
+type Props = object;
 
 export default function Footer({}: Props) {
   return (

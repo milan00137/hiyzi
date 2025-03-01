@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useBearStore } from "@/hooks/useStore";
 
-type Props = {};
+type Props = object;
 
 gsap.registerPlugin(useGSAP);
 
