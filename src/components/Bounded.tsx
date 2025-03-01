@@ -1,25 +1,37 @@
+import React from "react";
 import clsx from "clsx";
 
-type BoundedProps = {
-  as?: React.ElementType;
-  className?: string;
-  children: React.ReactNode;
-};
+// Helper type for polymorphic components
+type PolymorphicProps<
+  C extends React.ElementType,
+  Props = {}
+> = Props & {
+  as?: C;
+} & Omit<React.ComponentPropsWithoutRef<C>, keyof Props | "as">;
 
-export const Bounded = ({
-  as: Comp = "section",
+type BoundedProps<C extends React.ElementType = "section"> = PolymorphicProps<
+  C,
+  {
+    className?: string;
+    children?: React.ReactNode;
+  }
+>;
+
+export function Bounded<C extends React.ElementType = "section">({
+  as,
   className,
   children,
   ...restProps
-}: BoundedProps) => {
+}: BoundedProps<C>) {
+  const Component = as || "section";
   return (
-    <Comp
+    <Component
       className={clsx("px-4 first:pt-10 md:px-6", className)}
       {...restProps}
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
         {children}
       </div>
-    </Comp>
+    </Component>
   );
-};
+}
