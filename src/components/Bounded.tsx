@@ -4,7 +4,7 @@ import clsx from "clsx";
 // Helper type for polymorphic components
 type PolymorphicProps<
   C extends React.ElementType,
-  Props = {}
+  Props = object
 > = Props & {
   as?: C;
 } & Omit<React.ComponentPropsWithoutRef<C>, keyof Props | "as">;
