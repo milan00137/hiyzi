@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import ViewCanvas from "@/components/ViewCanvas";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const alpino = localFont({
   src: "../../public/fonts/Alpino-Variable.woff2",
@@ -46,6 +47,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-3P2YVT9968" />
     </html>
   );
 }
